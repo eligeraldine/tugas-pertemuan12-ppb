@@ -30,9 +30,9 @@ class LoginViewModel(private val repository: UserRepository) : ViewModel() {
         viewModelScope.launch {
             val isSuccess = repository.login(username, password)
             loginMessage = if (isSuccess) {
-                "✅ Login Berhasil!"
+                "Login Berhasil!"
             } else {
-                "❌ Login Gagal: Username atau Password salah."
+                "Login Gagal: Username atau Password salah."
             }
         }
     }
