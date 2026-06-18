@@ -16,7 +16,6 @@ class LoginViewModel(private val repository: UserRepository) : ViewModel() {
     var loginMessage by mutableStateOf<String?>(null)
 
     init {
-        // Memasukkan data akun awal ke database saat aplikasi dibuka
         viewModelScope.launch {
             repository.insertDummyUser()
         }

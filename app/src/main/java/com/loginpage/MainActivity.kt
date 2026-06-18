@@ -21,7 +21,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Menyiapkan Database dan menghubungkannya ke ViewModel
         val database = UserDatabase.getDatabase(applicationContext)
         val repository = UserRepository(database.userDao())
         val factory = LoginViewModelFactory(repository)
